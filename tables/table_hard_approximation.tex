@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3.2pt}
+\begin{tabular}{llrrrrr}
+\toprule
+Model & Length & Soft PPL & Hard PPL & Gap & Soft cost & Hard cost \\
+\midrule
+\textbf{MoSAR0} & 2k & 12.269 & 12.703 & +3.5\% & 0.2193 & 0.1544 \\
+\textbf{MoSAR0} & 4k & 11.753 & 12.216 & +3.9\% & 0.1878 & 0.1276 \\
+\textbf{MoSAR0} & 8k & 12.208 & 12.872 & +5.4\% & 0.1690 & 0.1038 \\
+\midrule
+MoSAR-cost & 2k & 12.553 & 13.123 & +4.5\% & 0.0887 & 0.0724 \\
+MoSAR-cost & 4k & 12.053 & 12.737 & +5.7\% & 0.0562 & 0.0424 \\
+MoSAR-cost & 8k & 13.276 & 13.795 & +3.9\% & 0.0858 & 0.0481 \\
+\bottomrule
+\end{tabular}
+\caption{
+Hard top-1 approximation of learned MoSAR geometries. 
+The gap is the relative perplexity increase of hard routing with respect to the corresponding soft geometry. 
+Hard routing is not intended to improve over soft routing, but to test whether the learned controlled-decay geometry admits a low-cost approximation.
+}
+\label{tab:hard-approximation}
+\end{table}

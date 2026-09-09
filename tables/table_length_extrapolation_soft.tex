@@ -1,0 +1,25 @@
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrrrr}
+\toprule
+Model & PPL@2k & PPL@4k & PPL@8k & $\Delta$ vs RoPE@8k \\
+\midrule
+\textbf{MoSAR0} & 12.269 & \textbf{11.753} & \textbf{12.208} & -19.6\% \\
+ALiBi & 12.411 & 11.873 & 12.232 & -19.4\% \\
+Fixed-S & 12.313 & 11.864 & 12.453 & -17.9\% \\
+Fixed-M & \textbf{12.267} & 11.827 & 12.520 & -17.5\% \\
+RoPE-M-mask & 12.703 & 12.212 & 12.584 & -17.1\% \\
+MoSAR-cost & 12.553 & 12.053 & 13.276 & -12.5\% \\
+RoPE & 12.517 & 12.373 & 15.176 & 0.0\% \\
+ProPE-0.75 & 12.409 & 14.001 & 29.594 & +95.0\% \\
+\bottomrule
+\end{tabular}
+\caption{
+Length extrapolation in soft/native inference mode. 
+All models are evaluated on the same validation corpus, rebuilt at each context length. 
+Lower perplexity is better. The last column reports relative change with respect to RoPE at 8k tokens.
+}
+\label{tab:length-extrapolation-soft}
+\end{table}
